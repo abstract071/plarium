@@ -3,3 +3,4 @@ dist/
 node_modules/
 **/tests/__snapshots__/
 false/
+package-lock.json

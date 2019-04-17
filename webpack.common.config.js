@@ -9,7 +9,6 @@ module.exports = {
   resolve: {
     extensions: [ '.tsx', '.ts', '.js', '.scss' ],
     modules: [
-      path.resolve( __dirname, 'static' ),
       path.resolve( __dirname, 'src' ),
       'node_modules'
     ]
@@ -21,19 +20,6 @@ module.exports = {
   ],
   module: {
     rules: [
-      // {
-      //   enforce: 'pre',
-      //   test: /\.tsx?$/,
-      //   use: [
-      //     'tslint-loader'
-      //   ]
-      // },
-      // {
-      //   test: /\.tsx?$/,
-      //   use: [
-      //     'awesome-typescript-loader'
-      //   ]
-      // },
       {
         enforce: 'pre',
         test: /\.(js|ts|tsx)s$/,
@@ -43,11 +29,6 @@ module.exports = {
           'source-map-loader'
         ]
       },
-      // {
-      //   test: /\.tsx?$/,
-      //   use: 'ts-loader',
-      //   exclude: /node_modules/
-      // },
       {
         test: /\.(js|ts|tsx)$/,
         exclude: /node_modules/,
